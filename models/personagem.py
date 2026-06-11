@@ -33,7 +33,7 @@ class Personagem:
         elif direcao == 'direita':
             nx +=1
         if (self.labirinto is None or
-                self.labirinto.casa_livre(nx,ny)):
+                not self.labirinto.eh_parede(nx,ny)):
             self.x,self.y = nx,ny
 
     def carregar_sprites(self):
